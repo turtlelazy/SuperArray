@@ -7,5 +7,13 @@ public class SuperArray{
 		data = new String[10];
 	}
 	
+	public int size(){
+		return size;
+	}
+	
+	public boolean add(String element){
+		data[size] = element;
+		size ++;
+	}
 
 }
