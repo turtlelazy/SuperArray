@@ -15,5 +15,11 @@ public class SuperArray{
 		data[size] = element;
 		size ++;
 	}
+	
+	public String get(int index){
+		return data[index];
+	}
+	
+	
 
 }
