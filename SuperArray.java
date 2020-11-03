@@ -26,5 +26,14 @@ public class SuperArray{
 		return replaced;
 	}
 	
+	private void resize(){
+		String[] cup = data;
+		data = new String[size+1];
+		for(int i = 0; i <cup.length;i++){
+			data[i] = cup[i]
+		}
+	}
+	
+	
 
 }
