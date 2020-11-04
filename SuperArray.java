@@ -41,7 +41,10 @@ public class SuperArray{
 		return (size == 0);
 	}
 	
-	
+	public void clear(){
+		size = 0;
+		data = new String[10];
+	}
 	
 
 }
