@@ -37,6 +37,10 @@ public class SuperArray{
 			data[i] = cup[i];
 		}
 	}
+	public boolean isEmpty(){
+		return (size == 0);
+	}
+	
 	
 	
 
