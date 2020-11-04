@@ -57,5 +57,15 @@ public class SuperArray{
 		returnString += "]";
 		return returnString;
 	}
+	
+	public boolean contains(String s){
+		for(int i = 0;i<sizei++){
+			if(data[i].equals(s)){
+				return true;
+			}
+		}
+		return false;
+	}
+	
 
 }
