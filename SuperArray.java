@@ -25,6 +25,13 @@ public class SuperArray{
 		return true;
 	}
 	
+	public void add(int index, String element){
+		for(int i = size;i>index;i--){
+			data[i] = data[i-1];
+		}
+		data[index] = element;
+	}
+	
 	public String get(int index){
 		return data[index];
 	}
