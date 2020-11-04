@@ -32,6 +32,7 @@ public class SuperArray{
 		data[index] = element;
 	}
 	
+	
 	public String get(int index){
 		return data[index];
 	}
