@@ -7,6 +7,9 @@ public class Test{
 		for(int i = 0; i < words.size(); i++){
 		  System.out.println( words.get(i));
 		}
+		SuperArray test = new SuperArray();
+		System.out.println(test.remove(0));
+		System.out.println(test.remove(-1));
 	}
 
 }
