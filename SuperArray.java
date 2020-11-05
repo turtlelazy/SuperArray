@@ -9,7 +9,7 @@ public class SuperArray{
 	
 	public SuperArray(int initialCapacity){
 		size = 0;
-		data = new string[initialCapacity];
+		data = new String[initialCapacity];
 	}
 	
 	public int size(){
@@ -37,10 +37,15 @@ public class SuperArray{
 	}
 	
 	public String remove(int index){
-		for(int i = index; i < size;i++){
-			data[i] = data[i+1];
+		String removed = null;
+		if(index<size){
+			removed = data[index];
+		}
+		for(int i = index+1; i < size;i++){
+			data[i-1] = data[i];
 		}
 		size --;
+		return removed;
 	}
 	
 	public String get(int index){
@@ -74,7 +79,7 @@ public class SuperArray{
 		for(int i =0; i <size;i++){
 			returnString += data[i];
 			if(i!=size-1){
-				returnString+= ",";
+				returnString+= ", ";
 			}
 		}
 		returnString += "]";
@@ -82,7 +87,7 @@ public class SuperArray{
 	}
 	
 	public boolean contains(String s){
-		for(int i = 0;i<sizei++){
+		for(int i = 0;i<size;i++){
 			if(data[i].equals(s)){
 				return true;
 			}
@@ -106,6 +111,7 @@ public class SuperArray{
 		}
 		return returnString;
 	}
+	
 	
 	
 
