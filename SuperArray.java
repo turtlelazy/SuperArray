@@ -99,6 +99,14 @@ public class SuperArray{
 		return -1;
 	}
 	
+	public String[] toArray(){
+		String[] returnString = new String[size];
+		for(int i = 0; i<size;i++){
+			returnString[i]=data[i];
+		}
+		return returnString;
+	}
+	
 	
 
 }
