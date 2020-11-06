@@ -25,6 +25,7 @@ public class SuperArray{
 		return true;
 	}
 	
+	
 	public void add(int index, String element){
 		if(data.length<=size){
 			resize();
