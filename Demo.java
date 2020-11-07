@@ -20,6 +20,30 @@ public class Demo{
 	  return overlapped;
   }
   
+  public static SuperArray zip(SuperArray a, SuperArray b){
+	  int a;
+	  String[] leftovers = new String[]
+	  SuperArray returnValue = new SuperArray();
+	  if(a.size()>b.size()){
+		  a = b.size();
+		  for(int i = a;i<a.size;i++){
+			  returnValue.add(a.get(i));
+		  }
+	  }
+	  else{
+		  a = a.size;
+		  for(int i = a;i<b.size;i++){
+			  returnValue.add(b.get(i));
+		  }
+	  }
+	  
+	  for(int i = a.size()-1; i>=0;i--){
+		  returnValue.add(b.get(i),0);
+		  returnValue.add(a.get(i),0);
+	  }
+	  
+  }
+  
   public static void main(String[]args){
     SuperArray words = new SuperArray();
     //grouped to save vertical space
