@@ -126,6 +126,15 @@ public class SuperArray{
 		return -1;
 	}
 	
+	public boolean equals(SuperArray a){
+		for(int i =0; i < size;i++){
+			if(!data[i].equals(a.data[i])){
+				return false;
+			}
+		}
+		return (size == a.size);
+	}
+	
 	
 	
 

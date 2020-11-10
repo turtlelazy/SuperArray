@@ -21,51 +21,27 @@ public class Demo{
   }
   
   public static SuperArray zip(SuperArray a, SuperArray b){
-	  int a;
-	  String[] leftovers = new String[]
+	  int smallerSize;
 	  SuperArray returnValue = new SuperArray();
 	  if(a.size()>b.size()){
-		  a = b.size();
-		  for(int i = a;i<a.size;i++){
+		  smallerSize = b.size();
+		  for(int i = smallerSize;i<a.size();i++){
 			  returnValue.add(a.get(i));
 		  }
 	  }
 	  else{
-		  a = a.size;
-		  for(int i = a;i<b.size;i++){
+		  smallerSize = a.size();
+		  for(int i = smallerSize;i<b.size();i++){
 			  returnValue.add(b.get(i));
 		  }
 	  }
 	  
-	  for(int i = a.size()-1; i>=0;i--){
-		  returnValue.add(b.get(i),0);
-		  returnValue.add(a.get(i),0);
+	  for(int i = smallerSize-1; i>=0;i--){
+		  returnValue.add(0,b.get(i));
+		  returnValue.add(0,a.get(i));
 	  }
+	  return returnValue;
 	  
   }
   
-  public static void main(String[]args){
-    SuperArray words = new SuperArray();
-    //grouped to save vertical space
-    words.add("kani");   words.add("uni");     words.add("ebi");     words.add("una");     
-    words.add("una");    words.add("ebi");     words.add("kani");    words.add("una");
-    words.add("una");    words.add("ebi");     words.add("toro"); 
-
-    System.out.println(words);
-    removeDuplicates(words);
-    System.out.println(words);  
-	String[] numbersA = {"9","1","2","2","3","4"};
-	String[] numbersB = {"0","4","2","2","9"};
-	SuperArray numbersAS = new SuperArray();
-	SuperArray numbersBS = new SuperArray();
-	for(int i = 0;i<numbersA.length;i++){
-		numbersAS.add(numbersA[i]);
-	}
-	
-	for(int i = 0;i<numbersB.length;i++){
-		numbersBS.add(numbersB[i]);
-	}
-	
-	System.out.println(findOverlap(numbersAS,numbersBS));
-	}
 }
