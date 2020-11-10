@@ -1,7 +1,7 @@
 import java.util.Arrays;
 public class Steven_Tester {
     public static void main(String[] args) {
-        /* 
+         
         SuperArray words = new SuperArray();
         System.out.println(words.get(0));
         words.add("kani");
@@ -10,8 +10,8 @@ public class Steven_Tester {
         for (int i = 0;i<50;i++ ){
             words.add(String.valueOf(i));
         }
-        */
-        /*
+        
+        
         for (int i = 0;i<50;i++ ){
             System.out.println(words.get(i)); // i should be at 46 since 50 - 3 = 47. 47 is 0-46.
         }
@@ -20,10 +20,10 @@ public class Steven_Tester {
             words.set(i, "resized" + String.valueOf(i));
             System.out.println(words.get(i)); // i should be at 46 since 50 - 3 = 47. 47 is 0-46.
         }
-        */
+        
         // TESTS FOR PART 2 / HW 15
         
-        /* clear() and isEmpty() test
+        // clear() and isEmpty() test
         System.out.println("clear() and isEmpty() test");
         SuperArray test1 = new SuperArray(3);
         test1.add("element1");
@@ -32,7 +32,7 @@ public class Steven_Tester {
         test1.clear();                      
         System.out.println(test1.size());       //0
         System.out.println(test1.isEmpty());    //true
-        //
+        
 
         // contains() and new SuperArray() test
         System.out.println("contains() and new SuperArray() test");
@@ -43,7 +43,7 @@ public class Steven_Tester {
         test2.add("meow");
         System.out.println(test2.contains("dog"));  //true
         System.out.println(test2.contains("dag"));  //false
-        //
+        
 
         // toString(), add(), and remove() test
         System.out.println("toString(), add(), and remove() test");
@@ -53,7 +53,7 @@ public class Steven_Tester {
         test2.remove(2);
         System.out.println(test2.toString());   //[dog, dog, cat, meow]
         System.out.println(test2.size());   //4
-        /
+        
 
 
         // indexOf() and toArray() test
@@ -61,22 +61,22 @@ public class Steven_Tester {
         System.out.println(test2.indexOf("3"));     // -1
         System.out.println(test2.indexOf("dog"));   // 0
         System.out.println(Arrays.toString(test2.toArray()));
-        */
+        
 
         //HW 16 TESTS
 
-        /*
-        SuperArray words = new SuperArray();
+        
+        SuperArray words2 = new SuperArray();
         //grouped to save vertical space
-        words.add("kani");   words.add("uni");     words.add("ebi");     words.add("una");     
-        words.add("una");    words.add("ebi");     words.add("kani");    words.add("una");
-        words.add("una");    words.add("ebi");     words.add("toro"); 
-        System.out.println(words);
-        SuperArray.removeDuplicates(words);
-        System.out.println(words);
-        */
+        words2.add("kani");   words2.add("uni");     words2.add("ebi");     words2.add("una");     
+        words2.add("una");    words2.add("ebi");     words2.add("kani");    words2.add("una");
+        words2.add("una");    words2.add("ebi");     words2.add("toro"); 
+        System.out.println(words2);
+        Demo.removeDuplicates(words2);
+        System.out.println(words2);
+        
 
-        /*
+        
         SuperArray test3 = new SuperArray();
         test3.add("0");
         test3.add("4");
@@ -87,9 +87,9 @@ public class Steven_Tester {
         test4.add("9");
         test4.add("9");
         test4.add("9");
-        System.out.println(SuperArray.findOverlap(test3, test4));
+        System.out.println(Demo.findOverlap(test3, test4));
         System.out.println(test4.lastIndexOf("8"));
-        */
+        
 
         //HW 17 TESTS
         // removeDuplicates() test 
@@ -178,22 +178,22 @@ public class Steven_Tester {
         // zip() test
         System.out.println();
         System.out.println("zip() test");
-        SuperArray words = new SuperArray();
-        words.add("one");   words.add("two");   words.add("three");
-        words.add("four");  words.add("five");  words.add("six");
+        SuperArray words1 = new SuperArray();
+        words1.add("one");   words1.add("two");   words1.add("three");
+        words1.add("four");  words1.add("five");  words1.add("six");
         SuperArray numbers = new SuperArray();
         numbers.add("1");   numbers.add("2");   numbers.add("3");
         numbers.add("4");   numbers.add("5");   numbers.add("6");
-        System.out.println(Demo.zip(words,numbers).toString()); 
+        System.out.println(Demo.zip(words1,numbers).toString()); 
         System.out.println("[one, 1, two, 2, three, 3, four, 4, five, 5, six, 6] (expected)");
         // change to words.size() < numbers.size()
-        words.remove(5);
-        System.out.println(Demo.zip(words,numbers).toString());
+        words1.remove(5);
+        System.out.println(Demo.zip(words1,numbers).toString());
         System.out.println("[one, 1, two, 2, three, 3, four, 4, five, 5, 6] (expected)");
         // change to words.size() > numbers.size()
         numbers.remove(5);
         numbers.remove(4);
-        System.out.println(Demo.zip(words,numbers));
+        System.out.println(Demo.zip(words1,numbers));
         System.out.println("[one, 1, two, 2, three, 3, four, 4, five] (expected)");
         }
 

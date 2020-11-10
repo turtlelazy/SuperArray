@@ -8,6 +8,9 @@ public class SuperArray{
 	}
 	
 	public SuperArray(int initialCapacity){
+		if(initialCapacity < 0){
+			throw new IllegalArgumentException(initialCapacity + "is negative");
+		}
 		size = 0;
 		data = new String[initialCapacity];
 	}
@@ -27,6 +30,9 @@ public class SuperArray{
 	
 	
 	public void add(int index, String element){
+		if(index < 0 || index > size()){
+			throw new IndexOutOfBoundsException("Index, " + index +", is out of bounds");
+		}
 		if(data.length<=size){
 			resize();
 		}
@@ -38,6 +44,9 @@ public class SuperArray{
 	}
 	
 	public String remove(int index){
+		if(index < 0 || index >= size()){
+			throw new IndexOutOfBoundsException("Index, " + index +", is out of bounds");
+		}
 		int sizeV = size;
 		String removed = null;
 		if(index<size){
@@ -54,10 +63,16 @@ public class SuperArray{
 	}
 	
 	public String get(int index){
+		if(index<0 || index >= size()){
+			throw new IndexOutOfBoundsException("Index, " + index +", is out of bounds");
+		}
 		return data[index];
 	}
 	
 	public String set(int index,String element){
+		if(index < 0 || index >= size){
+			throw new IndexOutOfBoundsException("Index, " + index +", is out of bounds");
+		}
 		String replaced = data[index];
 		data[index] = element;
 		return replaced;
