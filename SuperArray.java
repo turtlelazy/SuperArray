@@ -70,7 +70,7 @@ public class SuperArray{
 	}
 	
 	public String set(int index,String element){
-		if(index < 0 || index >= size){
+		if(index < 0 || index >= size()){
 			throw new IndexOutOfBoundsException("Index, " + index +", is out of bounds");
 		}
 		String replaced = data[index];
